@@ -84,6 +84,7 @@ you pass at this driver creation.
         self.wait.until(lambda x: org_url != x.current_url, message="Could not login")
 
     def realtime_rum(self, checkid, sample_interval=60):
+        "get the realtime rum"
         self.get("/rum/%s#datefilter=realtime&filter&timetype=median" % checkid, force_base=True)
         time.sleep(sample_interval)
         return self.driver.execute_script("return Pingdom.rum.realtimeData")

@@ -56,6 +56,8 @@ So how it is use:
         account='owner@epi10.cl'
     )
 
+    pingdom.login()
+
 
 Now you need to know the rum test ID, that's easy all you need to do is login into pingdom and then look for the RUM link
 in the reports page, the format of the rum link is https://my.pingdom.com/rum/XXXXXXXXXXX
@@ -157,6 +159,10 @@ Now you are ready to use it
         password='super-secret-password'
     )
 
+    #then login
+
+    pingdom.login()
+
 
 
 
@@ -201,7 +207,12 @@ And now the  fun part, to get the realtime rum you just pick a sample interval (
        'url': 'http://epi10.cl'
     }
 
+you can use with statements
 
+.. code:: python
+
+    with PyngdomDriver(username='user@epi10.cl', password='super-secret-password') as pingdom:
+        realtime = pingdom.realtime_rum('XXXXXXXXXXX', 30)
 
 And its just that simple... once again we strongly suggest using phantomjs, installit is so simple in linux and mac.
 
@@ -237,3 +248,15 @@ because for some projects we really need them.
 
     #print detailed information
     print pingdom.get_detailed_check_information(api_epi10_check['id'])
+
+Changelog
+=========
+
+0.1.1 2014-06-04
+----------------
+* Fix Documentation to include login
+
+
+0.1.0 2014-06-03
+----------------
+* initial commit

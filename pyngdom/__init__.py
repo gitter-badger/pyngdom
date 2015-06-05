@@ -13,7 +13,7 @@ from httplib import HTTPSConnection
 
 from pyngdomdriver import PyngdomDriver
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 if sys.version_info >= (2, 7, 9):
     ctx = ssl.create_default_context()
