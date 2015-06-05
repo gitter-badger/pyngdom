@@ -1,5 +1,9 @@
 
 =======
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/Epi10/pyngdom
+   :target: https://gitter.im/Epi10/pyngdom?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 pyngdom
 =======
 
